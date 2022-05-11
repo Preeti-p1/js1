@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Array questions</h1>
+    <pre>
+   1. const res=array.reduce((accu,cur)=>accu=accu*cur,1);
+return res;</pre>
+    <pre>
+    2.const res=array.reduce((accu,cur)=>accu=accu+cur,0);
+    return res;
+    </pre>
+    <pre>
+    3.Even odd
+    let evenSum=0;
+    let oddSum=0;
+    let B=[];
+    for(let i=0;i<N;i++){
+      if(Arr[i]%2===0){
+        evenSum=evenSum+Arr[i];
+      }
+    }
+    B.unshift(evenSum);
+    
+    for(let j=0;j<N;j++){
+      if(Arr[j]%2!==0){
+        oddSum=oddSum+Arr[j];
+      }
+    }
+    B.push(oddSum);
+    return B;
+    </pre>
+    <pre>
+        4.const findCount = (N, K, Arr) => 
+        {
+          let c=0;
+          for(let i=0;i<N;i++)
+          {
+            if(Arr[i]==K)
+            {
+              c++;
+            }
+          }
+           
+           return c;
+            
+        };   
+     
+    </pre>
+    <pre>
+        5. const Find_Num = (array,N,M) => 
+        {
+          let c=0;
+          for(let i=0;i<N;i++)
+          {
+            if(array[i]==M)
+            {
+              c++;
+            }
+          }
+          
+          if(c>0)
+          {
+            return "YES";
+          }
+          else{
+            return "NO";
+          }
+          
+        };
+      
+    </pre>
+    <pre>
+        6. const highAge = (N, Arr) => 
+        {
+          
+        
+        const result = Arr.filter((N)=> N>=18);
+        
+        return result;
+        
+        }
+      </pre>
+      <pre>
+        7. {
+    
+            const result = array.map((N)=> N+1);
+            console.log(...result); 
+            
+          
+      </pre>
+      <pre>
+          8. {
+    
+            let c=0;
+            for(let i=0;i<N;i++)
+            {
+              if(Arr[i]<32)
+              {
+                c++;
+              }
+            }
+            
+            if(c>0)
+            {
+              return "NO";
+            }
+            else{
+              return "YES";
+            }
+              
+      </pre>
+      <pre>
+          9.let unique = arr.filter((value)=>arr.indexOf(value)==arr.lastIndexOf(value));
+      
+          return unique.length;
+           
+      </pre>
+      <pre>
+          10.
+      let res1= Math.min(...arr);
+      return res1;
+    
+    }
+    
+    function arrayMax(arr) {
+     
+     let res2= Math.max(...arr);
+     return res2;
+    
+    }
+</pre>
+
+    
+</body>
+
+</html>
