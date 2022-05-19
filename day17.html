@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //In Closure even though the execution context is destroyed, the variable environment somehow keeps living somewhere in the engine.
+    let f;
+
+const g = function(){
+    const a = 23;
+
+    f = function(){
+        console.log(a*2);
+    };
+};
+
+const h = function(){
+    const b = 25;
+
+    f = function(){
+        console.log(b*2);
+    };
+};
+
+g();
+f();
+// console.dir(f);
+
+h();
+f();
+console.dir(f);
+
+setTimeout((fruit1, fruit2) => {
+    console.log(fruit1,fruit2 );
+},5000, "Banana", "Orange");
+
+const fruits = ["Banana", "Orange"];
+const timer = setTimeout((fruit1, fruit2) => {
+    console.log(fruit1,fruit2);
+},5000, 
+...fruits
+);
+console.log("Waiting for time to finish");
+
+if(fruits.includes("Banana")){
+    clearTimeout(timer);
+}
+setInterval(() => {
+    console.log("Hi");
+}, 2000);
+const boardingPasses = () => {
+    const peoplePerGroup = n / 3;
+
+    const boardingPassengers = (n,wait) => {
+    const peoplePerGroup = n/3;
+
+    setTimeout(() => {
+        console.log(`Boarding ${n} number of passengers`);
+        console.log(`Boarding ${peoplePerGroup} people per group`);
+        console.log("Boarding in secs", wait);
+    }, wait*1000);
+};
+
+boardingPassengers(180,2);
+
+
+</script>
+</html>
